@@ -3,7 +3,6 @@ module.exports = [
     'src/',
     'terraform/',
     '_config.yml',
-    '.gitignore',
     '404.html',
     'docker-compose.yml',
     'Gemfile',

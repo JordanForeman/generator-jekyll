@@ -2,12 +2,16 @@ const Generator = require('yeoman-generator');
 const questions = require('./config/inputs');
 const files = require('./config/manifest');
 
-function copyTemplateFile(filename) {
+function copyTemplateFileTo(srcFilename, destFilename) {
     this.fs.copyTpl(
-        this.templatePath(filename),
-        this.destinationPath(filename),
+        this.templatePath(srcFilename),
+        this.destinationPath(destFilename),
         this.configuration
     );
+}
+
+function copyTemplateFile(filename) {
+    this.copyTemplateFileTo(filename, filename);
 }
 
 module.exports = class extends Generator {
@@ -15,6 +19,7 @@ module.exports = class extends Generator {
         super(args, opts);
 
         this.copyTemplateFile = copyTemplateFile.bind(this);
+        this.copyTemplateFileTo = copyTemplateFileTo.bind(this);
     }
 
     async prompting() {
@@ -24,6 +29,7 @@ module.exports = class extends Generator {
 
     writing() {
         files.forEach(this.copyTemplateFile);
+        this.copyTemplateFileTo('_gitignore', '.gitignore');
     }
 
     install() {
