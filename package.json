@@ -1,6 +1,6 @@
 {
   "name": "@jordanforeman/generator-jekyll",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Yeoman generator for static Jekyll sites",
   "main": "app/index.js",
   "scripts": {
