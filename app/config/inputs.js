@@ -21,7 +21,7 @@ module.exports = [
     },
     {
         type: 'input',
-        name: 'description',
+        name: 'tfStateBucket',
         message: 'What S3 bucket should Terraform store your state in?'
     }
 ];
