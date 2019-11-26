@@ -27,7 +27,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@jordanforeman/babel-config": "0.1.0",
+    "@jordanforeman/babel-config": "0.1.1",
     "@jordanforeman/commitlint-config": "0.2.1",
     "@jordanforeman/release-config": "0.2.1",
     "@jordanforeman/renovate-config": "0.2.1",
