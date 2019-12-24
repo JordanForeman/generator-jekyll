@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/JordanForeman/generator-jekyll#readme",
   "dependencies": {
-    "yeoman-generator": "4.2.0"
+    "yeoman-generator": "4.4.0"
   },
   "publishConfig": {
     "access": "public"
